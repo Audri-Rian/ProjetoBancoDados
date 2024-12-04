@@ -83,7 +83,7 @@ CREATE TABLE PedidoProdutoAcompanhamentos (
     FOREIGN KEY (ID_Acompanhamento) REFERENCES Acompanhamento(ID_Acompanhamento)
 );
 
--- Inserindo dados na tabela Categoria
+
 INSERT INTO Categoria (Nome_Categoria) VALUES 
 ('Eletrônicos'),
 ('Roupas'),
@@ -101,7 +101,7 @@ INSERT INTO Categoria (Nome_Categoria) VALUES
 ('Casa'),
 ('Pet');
 
--- Inserindo dados na tabela Produto
+
 INSERT INTO Produto (Nome_Produto, Preco, ID_Categoria, Estoque) VALUES
 ('Smartphone', 1200.00, 1, 50),
 ('Camiseta', 50.00, 2, 200),
@@ -137,7 +137,7 @@ INSERT INTO Clientes (Nome_Cliente, Email, Telefone) VALUES
 ('Felipe Martins', 'felipe@email.com', '11893456789'),
 ('Larissa Lima', 'larissa.lima@email.com', '11977665544');
 
--- Inserindo dados na tabela Endereco
+
 INSERT INTO Endereco (ID_Cliente, Logradouro, Numero, Complemento, Bairro, Cidade, Estado, CEP) VALUES
 (1, 'Rua A', '123', 'Apto 101', 'Centro', 'São Paulo', 'SP', '01001000'),
 (2, 'Rua B', '456', 'Casa 2', 'Jardim Paulista', 'São Paulo', 'SP', '02002000'),
@@ -155,7 +155,7 @@ INSERT INTO Endereco (ID_Cliente, Logradouro, Numero, Complemento, Bairro, Cidad
 (14, 'Rua N', '1111', 'Casa 16', 'Pinheiros', 'São Paulo', 'SP', '14014000'),
 (15, 'Rua O', '1212', 'Apto 17', 'Santo Amaro', 'São Paulo', 'SP', '15015000');
 
--- Inserindo dados na tabela Pedidos
+
 INSERT INTO Pedidos (ID_Cliente, Data_Pedido, Mes_Venda, Total, ID_Endereco) VALUES
 (1, '2024-01-05', 'Janeiro', 1500.00, 1),
 (2, '2024-01-12', 'Janeiro', 800.00, 2),
@@ -173,7 +173,7 @@ INSERT INTO Pedidos (ID_Cliente, Data_Pedido, Mes_Venda, Total, ID_Endereco) VAL
 (14, '2024-12-25', 'Dezembro', 3000.00, 14),
 (15, '2024-12-29', 'Dezembro', 4500.00, 15);
 
--- Inserindo dados na tabela Itens_Pedidos
+
 INSERT INTO Itens_Pedidos (ID_Pedido, ID_Produto, Quantidade, Preco_Unitario) VALUES
 (1, 1, 2, 1200.00),
 (1, 3, 10, 25.00),
@@ -191,7 +191,7 @@ INSERT INTO Itens_Pedidos (ID_Pedido, ID_Produto, Quantidade, Preco_Unitario) VA
 (9, 11, 1, 1800.00),
 (10, 14, 1, 800.00);
 
--- Inserindo dados na tabela Forma_Pagamento
+
 INSERT INTO Forma_Pagamento (Descricao) VALUES
 ('Cartão de Crédito'),
 ('Boleto'),
@@ -199,7 +199,7 @@ INSERT INTO Forma_Pagamento (Descricao) VALUES
 ('Débito'),
 ('Transferência');
 
--- Inserindo dados na tabela Historico_Pagamento
+
 INSERT INTO Historico_Pagamento (ID_Pedido, ID_Forma_Pagamento, Data_Pagamento, Valor_Pago) VALUES
 (1, 1, '2024-01-05 12:30:00', 1500.00),
 (2, 2, '2024-01-12 10:20:00', 800.00),
@@ -217,7 +217,7 @@ INSERT INTO Historico_Pagamento (ID_Pedido, ID_Forma_Pagamento, Data_Pagamento, 
 (14, 4, '2024-12-25 17:30:00', 3000.00),
 (15, 5, '2024-12-29 20:00:00', 4500.00);
 
--- Inserindo dados na tabela Acompanhamento
+
 INSERT INTO Acompanhamento (Descricao) VALUES
 ('Pedido enviado'),
 ('Pedido em preparação'),
@@ -235,7 +235,7 @@ INSERT INTO Acompanhamento (Descricao) VALUES
 ('Pedido reembolsado'),
 ('Pedido aguardando aprovação');
 
--- Inserindo dados na tabela PedidoProdutoAcompanhamentos
+
 INSERT INTO PedidoProdutoAcompanhamentos (ID_Item_Pedido, ID_Acompanhamento) VALUES
 (1, 1),
 (1, 2),
